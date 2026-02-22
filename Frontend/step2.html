@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screening Tool - Step 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="screening-body">
+
+<div class="container py-5">
+
+    <!-- Header -->
+    <div class="d-flex align-items-center mb-4">
+        <div class="brain-icon me-3">🧠</div>
+        <div>
+            <h4 class="mb-0 fw-bold">Screening Tool</h4>
+            <small class="text-muted">Step 2: Important Notice</small>
+        </div>
+    </div>
+
+    <!-- Card -->
+    <div class="screening-card">
+
+        <div class="disclaimer-box">
+
+            <h4 class="fw-bold mb-3">
+                ⚠ Important Disclaimer for Parents
+            </h4>
+
+            <p>
+                This screening tool is designed for educational and observational purposes only.
+                <strong>It does NOT provide a medical diagnosis of Autism Spectrum Disorder (ASD).</strong>
+            </p>
+
+            <p>
+                The results are intended to help you structure conversations with your pediatrician
+                or a qualified healthcare professional. If you have concerns about your child's
+                development, please consult a doctor regardless of the results of this tool.
+            </p>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-between mt-4">
+            <button onclick="goBackStep1()" class="btn btn-link text-secondary">
+                ← Go Back
+            </button>
+
+            <button onclick="startScreening()" class="btn continue-btn px-4">
+                I Understand, Start Screening
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

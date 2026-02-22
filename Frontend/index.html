@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LittleSigns | ASD Screening</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <div class="logo-box me-2">
+                🧩
+            </div>
+            <span class="brand-text">LittleSigns</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Items -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link" href="#" onclick="goToTest()">Test</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item d-flex align-items-center mx-3">
+                    🌍 <span class="ms-2 text-muted">English</span>
+                </li>
+
+                <li class="nav-item" id="userArea">
+                    <a href="login.html" class="btn login-btn">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container-fluid px-5">
+        <div class="row align-items-center min-vh-75">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6 text-lg-start text-center hero-text">
+                <h1 class="display-3 fw-bold">
+                    Early Signs Matter 💙
+                </h1>
+
+                <p class="lead mt-4">
+                    A gentle and parent-friendly autism screening tool designed 
+                    to help you understand your child's development.
+                </p>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary btn-lg me-3 px-4 py-2" onclick="goToTest()">
+                        Start Screening
+                    </button>
+
+                    <button class="btn btn-outline-secondary btn-lg px-4 py-2" onclick="scrollToWhy()">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <img src="https://autismawarenesscentre.com/wp-content/uploads/bigstock-Kids-Playing-Block-Toys-In-Pla-350958596.jpg" alt="Child Playing" class="hero-image img-fluid">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Section -->
+<section id="why" class="why-section">
+    <div class="container text-center">
+
+        <h2 class="why-title">Why Choose Our Screening Tool?</h2>
+        <p class="why-subtitle">Designed with care, backed by research</p>
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-md-6">
+                <div class="why-card">
+                    <div class="icon-circle">💚</div>
+                    <h4>Parent-Friendly</h4>
+                    <p>Clear, compassionate questions designed for busy parents</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="why-card">
+                    <div class="icon-circle">🧠</div>
+                    <h4>Research-Based</h4>
+                    <p>Questions aligned with recognized screening criteria</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="why-card">
+                    <div class="icon-circle">🛡️</div>
+                    <h4>Confidential</h4>
+                    <p>Your information is private and secure</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="why-card">
+                    <div class="icon-circle">⚡</div>
+                    <h4>Quick & Easy</h4>
+                    <p>Complete in 10–15 minutes at your own pace</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center p-4">
+    <p>© 2026 LittleSigns | Supporting Early Development</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
