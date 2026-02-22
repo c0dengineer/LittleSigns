@@ -229,8 +229,6 @@ options: [
 
 let currentSection = 0;
 let currentQuestion = 0;
-
-// store answers as object { "0-0": 2 }
 let answers = {};
 
 function loadQuestion() {

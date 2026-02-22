@@ -12,7 +12,7 @@ function scrollToWhy() {
     document.getElementById("why").scrollIntoView({behavior: "smooth"});
 }
 
-// Get stored users or empty object
+// SIGNIN
 let users = JSON.parse(localStorage.getItem("users")) || {};
 
 function loginUser() {
@@ -48,13 +48,13 @@ function loginUser() {
         return;
     }
 
-    // SUCCESS
     localStorage.setItem("username", name);
     localStorage.setItem("loggedIn", "true");
 
     window.location.href = "childinfo.html";
 }
 
+// SIGNUP 
 function showSignup() {
     let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
@@ -85,6 +85,7 @@ function showSignup() {
     errorMsg.innerText = "Account created successfully! You can now sign in.";
 }
 
+// GUEST
 function continueGuest() {
     localStorage.setItem("username", "Guest");
     localStorage.setItem("loggedIn", "true");
@@ -92,8 +93,19 @@ function continueGuest() {
 }
 
 
-// ================= NAVBAR GREETING =================
+// LOGOUT
+function logout() {
+    localStorage.clear();
+    window.location.href = "index.html";
+}
 
+function logout() {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("username");
+    window.location.href = "index.html";
+}
+
+// NAVBAR GREETING
 document.addEventListener("DOMContentLoaded", function () {
 
     const userArea = document.getElementById("userArea");
@@ -109,17 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function logout() {
-    localStorage.clear();
-    window.location.href = "login.html";
-}
-
-function logout() {
-    localStorage.removeItem("loggedIn");
-    localStorage.removeItem("username");
-    window.location.href = "login.html";
-}
-
+// SUBMIT TEST
 function submitTest() {
     let score = 0;
     let answer = document.querySelector('input[name="q1"]:checked');
@@ -129,10 +131,10 @@ function submitTest() {
     }
 
     localStorage.setItem("testScore", score);
-    window.location.href = "report.html";
+    window.location.href = "result.html";
 }
 
-
+// REPORT
 window.onload = function() {
     if (window.location.pathname.includes("report.html")) {
         let score = localStorage.getItem("testScore");
@@ -160,11 +162,12 @@ function goNextStep() {
 
     localStorage.setItem("childName", name);
     localStorage.setItem("childAge", age);
-    window.location.href = "step2.html";
+    window.location.href = "disclaimer.html";
 }
 
+// DISCLAIMER BOX
 function goBackStep1() {
-    window.location.href = "test.html";
+    window.location.href = "childinfo.html";
 }
 
 function startScreening() {
